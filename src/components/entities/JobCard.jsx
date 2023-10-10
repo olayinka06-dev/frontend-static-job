@@ -57,20 +57,20 @@ export const JobCard = () => {
           </div>
           <div className="grid border-t md:mt-0 md:pt-0 pt-4 mt-4 md:border-transparent grid-cols-3 md:grid-cols-5 gap-3 justify-end items-center">
             <button
-              className="bg-primary py-2 px-3 rounded-xl text-main font-[600] hover:bg-main transition ease-linear duration-500 hover:text-white"
+              className="bg-primary py-2 px-3 pt-3 rounded-xl text-main font-[600] hover:bg-main transition ease-linear duration-500 hover:text-white"
               onClick={() => allData.handleRoleClick(job.role)}
             >
               {job.role}
             </button>
             <button
-              className="bg-primary py-2 px-3 rounded-xl text-main font-[600] hover:bg-main transition ease-linear duration-500 hover:text-white"
+              className="bg-primary py-2 px-3 pt-3 rounded-xl text-main font-[600] hover:bg-main transition ease-linear duration-500 hover:text-white"
               onClick={() => allData.handleLevelClick(job.level)}
             >
               {job.level}
             </button>
             {job.languages.map((language) => (
               <button
-                className="bg-primary py-2 px-3 rounded-xl text-main font-[600] hover:bg-main transition ease-linear duration-500 hover:text-white"
+                className="bg-primary py-2 px-3 pt-3 rounded-xl text-main font-[600] hover:bg-main transition ease-linear duration-500 hover:text-white"
                 onClick={() => allData.handleLanguageClick(language)}
                 key={language}
               >
