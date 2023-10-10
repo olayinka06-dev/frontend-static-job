@@ -15,17 +15,29 @@ export const AppWrapper = ({ children }) => {
   }, []);
 
   const handleRoleClick = (role) => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
     if (!selectedRole.includes(role)) {
       setSelectedRole([...selectedRole, role]);
     }
   };
 
   const handleLevelClick = (level) => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
     if (!selectedLevel.includes(level)) {
       setSelectedLevel([...selectedLevel, level]);
     }
   };
   const handleLanguageClick = (language) => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
     if (!selectedLanguage.includes(language)) {
       setSelectedLanguage([...selectedLanguage, language]);
     }

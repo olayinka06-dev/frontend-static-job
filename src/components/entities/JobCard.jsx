@@ -11,8 +11,8 @@ export const JobCard = () => {
     Aos.init({
       duration: 700,
       easing: "ease-in",
-      delay: 100
-    })
+      delay: 100,
+    });
   }, []);
 
   return (
@@ -25,15 +25,29 @@ export const JobCard = () => {
         >
           <div className="flex relative flex-row gap-4 items-center">
             <div className="">
-              <img className="md:h-auto h-[65px] md:relative md:top-0 absolute top-[-65px]" src={job.logo} alt="logo" />
+              <img
+                className="md:h-auto h-[65px] md:relative md:top-0 absolute top-[-65px]"
+                src={job.logo}
+                alt="logo"
+              />
             </div>
             <div className="flex mt-5 md:mt-0 flex-col gap-2">
               <div className="flex flex-row gap-2">
                 <h4 className="font-[700] p-1 text-main">{job.company}</h4>
-                {job.new ? <h4 className="py-[4px] px-4 text-white bg-main rounded-3xl">New!</h4> : null}
-                {job.featured ? <h4 className="py-[4px] px-4 text-white bg-[rgb(42,58,57)] rounded-3xl">Feature</h4> : null}
+                {job.new ? (
+                  <h4 className="py-[4px] px-4 text-white bg-main rounded-3xl">
+                    New!
+                  </h4>
+                ) : null}
+                {job.featured ? (
+                  <h4 className="py-[4px] px-4 text-white bg-[rgb(42,58,57)] rounded-3xl">
+                    Feature
+                  </h4>
+                ) : null}
               </div>
-              <span className="font-[700] transition duration-500 ease-linear cursor-pointer hover:text-main">{job.position}</span>
+              <span className="font-[700] transition duration-500 ease-linear cursor-pointer hover:text-main">
+                {job.position}
+              </span>
               <div className="flex flex-row text-[rgb(152,159,159)] gap-2">
                 <h4>{job.postedAt}</h4>
                 <h4>. {job.contract} .</h4>
@@ -42,10 +56,26 @@ export const JobCard = () => {
             </div>
           </div>
           <div className="grid border-t md:mt-0 md:pt-0 pt-4 mt-4 md:border-transparent grid-cols-3 md:grid-cols-5 gap-3 justify-end items-center">
-            <button className="bg-primary py-2 px-3 rounded-xl text-main font-[600] hover:bg-main transition ease-linear duration-500 hover:text-white" onClick={()=> allData.handleRoleClick(job.role)}>{job.role}</button>
-            <button className="bg-primary py-2 px-3 rounded-xl text-main font-[600] hover:bg-main transition ease-linear duration-500 hover:text-white" onClick={()=> allData.handleLevelClick(job.level)}>{job.level}</button>
+            <button
+              className="bg-primary py-2 px-3 rounded-xl text-main font-[600] hover:bg-main transition ease-linear duration-500 hover:text-white"
+              onClick={() => allData.handleRoleClick(job.role)}
+            >
+              {job.role}
+            </button>
+            <button
+              className="bg-primary py-2 px-3 rounded-xl text-main font-[600] hover:bg-main transition ease-linear duration-500 hover:text-white"
+              onClick={() => allData.handleLevelClick(job.level)}
+            >
+              {job.level}
+            </button>
             {job.languages.map((language) => (
-              <button className="bg-primary py-2 px-3 rounded-xl text-main font-[600] hover:bg-main transition ease-linear duration-500 hover:text-white" onClick={()=> allData.handleLanguageClick(language)} key={language}>{language}</button>
+              <button
+                className="bg-primary py-2 px-3 rounded-xl text-main font-[600] hover:bg-main transition ease-linear duration-500 hover:text-white"
+                onClick={() => allData.handleLanguageClick(language)}
+                key={language}
+              >
+                {language}
+              </button>
             ))}
           </div>
         </div>
